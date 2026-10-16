@@ -8,7 +8,7 @@
   "changelog": "",
   "conflicts": [],
   "delisted": false,
-  "description": "普通怪、指挥官、监察官、官员与旗舰掉落规则，装备限制和 NET 共振器。",
+  "description": "调整普通敌人、指挥官、监察官、官员与旗舰的掉落，按势力和舰船尺寸分配装备，并加入 NET 共振器。",
   "displayName": "NPC掉落规则",
   "downloadUrls": [
     {
@@ -21,19 +21,20 @@
     "0.12.9"
   ],
   "featured": false,
-  "highlights": [],
+  "highlights": [
+    "按敌人类别、势力和舰船尺寸分配装备掉落。",
+    "为官员设置专属掉落池，为旗舰提供对应势力装备。",
+    "调整无人机敌人的掉落范围，并加入 NET 共振器掉落。",
+    "支持自定义监察官的奖励规则。"
+  ],
   "history": [],
   "id": "npc-loot-rules",
   "publishedAt": "2026-10-16",
   "readme": [
-    "版本 0.1.1，适配 EveJS 0.12.9 与启动器注入总线 API 1。",
-    "恢复普通怪、指挥官、监察官、官员、旗舰的自定义掉落及 NET 共振器。包含装备尺寸和势力筛选、普通 Meta≤4、船插/特殊模块排除、官员专属池、无人机白名单及旗舰势力装备。",
-    "模组采用内存规则和数据覆盖，不写发行表或 GameStore。60 个自定义监察官只包含奖励身份兼容资料，没有战斗属性，也不创建 NPC；对应 NPC 与异常仍需后续模组。",
-    "首次交付为停用状态；提交前核对入口已为 `loader.js`（磁盘启用）。由用户安排主服务重启并检查加载日志，当前运行进程是否已加载尚未确认。停用后再次重启恢复原规则；已掉落物品保留。启动日志应出现 `[npc-loot-rules] Registered 4 reward patches`，四个注入目标应全部成功；不支持的源码基线或已加载目标会报错。",
-    "运行离线检查：在 EveJS 目录执行 `node --test --test-concurrency=1 mods/npc-loot-rules/tests/*.test.cjs`。测试读取当前本地类型/Dogma快照，不启动 GameStore。此检查不证明启动器加载或游戏内掉落已验收。",
-    "游戏验收：分别击杀普通护卫/巡洋/战巡/战列、指挥官、监察官、官员、旗舰；核对势力/尺寸、禁止物品、弹药数量、共振器和残骸权限。指挥官共振器为概率掉落，单次没有掉落不能判定失败。",
-    "源代码沿用 EveJS 的 AGPL-3.0-only 授权；来源和数量见 provenance.json。升级后应重新核对源码与基线，不直接替换哈希跳过检查。",
-    "0.1.1 修复与 evejs-perf-fix 的 npcwreck 寿命补丁兼容：额外接受已审阅的变换后前缀哈希，保留原始和未知基线保护。重启后应检查 `nativeNpcWreckService.js` 为 applied；只看到 Registered 4 不足以确认掉落已接通。既有残骸不补发，验证应击毁新 NPC。"
+    "调整普通敌人、指挥官、监察官、官员与旗舰的掉落，按势力和舰船尺寸分配装备，并加入 NET 共振器。",
+    "启用后重启游戏服务端，通过击毁新生成的 NPC 获取对应掉落。稀有掉落按概率出现，不保证每次击毁都获得。",
+    "本模组不新增 NPC 或异常地点，也不会向已有残骸补发物品；停用后已获得的物品保留。",
+    "源代码沿用 AGPL-3.0-only 授权，数据来源见 provenance.json。"
   ],
   "repo": "https://github.com/MateralCMX/evejs-mod-npc-loot-rules",
   "requiresRestart": true,
