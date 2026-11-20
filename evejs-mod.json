@@ -14,11 +14,11 @@
     {
       "mirror": "github",
       "priority": 1,
-      "url": "https://github.com/MateralCMX/evejs-mod-npc-loot-rules/releases/download/v0.1.3/npc-loot-rules-0.1.3.zip"
+      "url": "https://github.com/MateralCMX/evejs-mod-npc-loot-rules/releases/download/v0.1.7/npc-loot-rules-0.1.7.zip"
     }
   ],
   "evejsVersions": [
-    "261018.1"
+    "261115.2"
   ],
   "featured": false,
   "highlights": [
@@ -29,7 +29,7 @@
   ],
   "history": [],
   "id": "npc-loot-rules",
-  "publishedAt": "2026-10-21",
+  "publishedAt": "2026-11-20",
   "readme": [
     "启用后重启游戏服务端，通过击毁新生成的 NPC 获取对应掉落。稀有掉落按概率出现，不保证每次击毁都获得。",
     "掉落规则作用于新生成的残骸；停用后已获得的物品保留。",
@@ -37,8 +37,8 @@
   ],
   "repo": "https://github.com/MateralCMX/evejs-mod-npc-loot-rules",
   "requiresRestart": true,
-  "sha256": "ee01bef593b0f5e05ef39adddf1a3ca8958b8c0464362bdb4afd208a90875281",
-  "sizeBytes": 72392,
+  "sha256": "418d05ae85249ab6f79ae649afcbb9c68aac067f2e6fb1bab27c9013c84306c1",
+  "sizeBytes": 89431,
   "tags": [],
-  "version": "0.1.3"
+  "version": "0.1.7"
 }
